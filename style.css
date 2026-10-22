@@ -1,0 +1,856 @@
+:root {
+
+    --pink : #cb3c8f;
+
+    --bg: #0a0a0a;
+
+    --shadow: 0 3px 3px rgb(0 0 0 / 0.5);
+
+}
+
+
+
+body {
+
+    font-size: 1.2rem;
+
+    font-family: 'Work Sans', sans-serif;
+
+    min-height: 4000px;
+
+}
+
+
+
+.hero {
+
+    min-height: 100vh;
+
+    background-color: var(--bg);
+
+    position: relative; 
+
+}
+
+
+
+.hero::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url(img/background2.jpg);
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+    z-index: -1;
+
+    filter: grayscale(50%) brightness(50%);
+
+}
+
+
+
+.hero {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: white;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+
+
+.hero h1, .hero h4, .hero p {
+
+   text-shadow: var(--shadow);
+
+}
+
+
+
+
+
+.hero h1 {
+
+    font-family: "Sacramento", cursive;
+
+    font-size: 5rem;
+
+}
+
+
+
+.hero h4{
+
+    font-size: 1.6rem;
+
+}
+
+
+
+.hero p {
+
+    font-size: 1.4rem;
+
+}
+
+
+
+.hero a {
+
+    color: var(--pink);
+
+    background-color: white;
+
+}
+
+
+
+.hero a:hover {
+
+    background-color: var(--pink);
+
+    color: white;
+
+}
+
+
+
+
+
+.mynavbar {
+
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+   
+
+}
+
+.mynavbar .offcanvas {
+
+    height: 100vh;
+
+    
+
+}
+
+
+
+.mynavbar .navbar-brand,
+
+.mynavbar .offcanvas-title {
+
+    font-family: "Sacramento", cursive;
+
+    font-size: 2.7rem;
+
+    font-weight: bold;
+
+
+
+}
+
+
+
+.mynavbar .nav-link {
+
+    color:darkgreen;
+
+    text-transform: uppercase;
+
+}
+
+
+
+.home {
+
+    background-image: url(img/background3.png);
+
+    background-size: cover;
+
+    min-height: 100vh;
+
+    margin-top: -10rem;
+
+    padding-top: 15rem;
+
+    padding-bottom: 5rem;
+
+}
+
+.home h2 {
+
+    color: #102811;
+    font-family: "Sacramento", cursive;
+    font-size: 4rem;
+    font-weight: bold;
+
+
+}
+
+.home h3 {
+
+    color: #371c07;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+
+}
+
+.home p {
+
+    font-size: 1.1rem;
+    color: #666;
+
+}
+
+.home .couple {
+    margin-top: 100px;
+}
+   
+.home .couple h3 {
+
+    font-family: "Sacramento", cursive;
+    font-size: 2.4rem;
+    color: #16241d;
+}
+
+.home .couple img {
+
+    width: 100%;
+
+    max-width: 400px;
+
+    border-radius: 50%;
+
+    margin-bottom: 1rem;
+
+}
+
+.info {
+    background-color: var(--bg);
+    color: white;
+    padding-top: 10rem;
+    paddding-bottom: 8rem;
+
+}
+
+.info h2 {
+
+    font-family: "Sacramento", cursive;
+
+    font-size: 5rem;
+
+
+    color: rgb(94, 64, 6);
+
+
+}
+
+.info .alamat {
+
+    font-size: 1.1rem;
+
+
+}
+
+.info .description {
+
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+
+.info .card {
+
+    background-color: rgba(210, 43, 43, 0.77); !important;
+    color: danger; !important;
+    border: 1px solid rgba(255, 255, 255, 0.2); !important;
+
+}
+
+.info .card-header {
+
+    border-bottom: 1px solid #999
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+}
+
+.info .card-body {
+
+    font-size: 1rem;
+
+}
+
+.info .card-footer {
+
+    border-top: 1px solid #999;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+
+/* Media Query */
+
+
+
+/* laptop */
+
+@media (max-width: 992px) {
+
+    html {
+
+        font-size: 75%;
+
+    }
+
+}
+
+
+
+/* tablet */
+
+@media (max-width: 768px) {
+
+    html {
+
+        font-size: 65%;
+
+    }
+
+
+
+    .mynavbar .nav-link {
+
+    color:darkgreen;
+
+    font-size: 2rem;
+
+    text-align: center;
+
+}
+
+
+
+/* hp */
+
+@media (max-width: 576px) {
+
+    html {
+
+        font-size: 60%;
+
+    }
+
+}
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.btn-open-invitation {
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: 600;
+}
+
+.btn-open-invitation:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(203, 60, 143, 0.4);
+}
+
+.btn-aot-map {
+    background: linear-gradient(135deg, #2e3b2b, #4e342e);
+    color: #f4ebd9 !important;
+    border: 2px solid #c29b38;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+.btn-aot-map:hover {
+    background: linear-gradient(135deg, #8b0000, #2e3b2b);
+    border-color: #ffffff;
+    color: #fff !important;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.5);
+}
+
+/* SECTION STORY */
+.story {
+    background-image: url(img/background3.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.story .sub-title {
+    color: #8b0000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+.story h2 {
+    font-family: "Sacramento", cursive;
+    color: #102811;
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.story .story-subtitle {
+    font-family: 'Work Sans', sans-serif;
+    color: #4e342e;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0.2rem;
+}
+
+.story .story-tagline {
+    font-style: italic;
+    color: #795548;
+    font-size: 1.1rem;
+}
+
+.story-card {
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px solid #795548;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(4px);
+}
+
+.story-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.story-icon {
+    font-size: 1.5rem;
+    color: #8b0000;
+    min-width: 35px;
+    height: 35px;
+    background-color: rgba(139, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-item p {
+    color: #2b2b2b;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.story-quote {
+    font-style: italic;
+    color: #2e3b2b;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.story-final {
+    display: inline-block;
+    color: #8b0000;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: rgba(139, 0, 0, 0.08);
+}
+
+/* SECTION GALLERY */
+.gallery {
+    background-image: url(img/background3.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.gallery .sub-title {
+    color: #8b0000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.95rem;
+    display: inline-block;
+    padding: 4px 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    border: 1px solid #8b0000;
+}
+
+.gallery h2 {
+    font-family: "Sacramento", cursive;
+    color: #102811;
+    font-size: 4.8rem;
+    font-weight: bold;
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.gallery .gallery-desc {
+    color: #444;
+    font-size: 1.15rem;
+}
+
+.gallery .gallery-img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: 3px solid #2e3b2b;
+    background-color: #000;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery .gallery-img-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.92);
+}
+
+.gallery .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(46, 59, 43, 0.85), rgba(139, 0, 0, 0.4));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(15px);
+}
+
+.gallery .gallery-overlay .icon {
+    font-size: 2.2rem;
+    color: #d4af37;
+    margin-bottom: 6px;
+}
+
+.gallery .gallery-overlay span {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.gallery .gallery-img-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: #8b0000;
+}
+
+.gallery .gallery-img-box:hover img {
+    transform: scale(1.12);
+    filter: brightness(1);
+}
+
+.gallery .gallery-img-box:hover .gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SECTION RSVP */
+.rsvp {
+    background-color: var(--bg);
+    color: white;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.rsvp .sub-title {
+    color: #c29b38;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+.rsvp h2 {
+    font-family: "Sacramento", cursive;
+    color: rgb(94, 64, 6);
+    font-size: 4.8rem;
+}
+
+.rsvp-form {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.rsvp-form .form-label {
+    color: #f4ebd9;
+    font-size: 1rem;
+}
+
+.rsvp-form .form-control, 
+.rsvp-form .form-select {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-aot-submit {
+    background-color: #2e3b2b;
+    color: white;
+    border: 1px solid #c29b38;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-aot-submit:hover {
+    background-color: #8b0000;
+    color: white;
+}
+
+/* SECTION GIFTS */
+.gifts {
+    background-image: url(img/background3.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.gifts .sub-title {
+    color: #8b0000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+.gifts h2 {
+    font-family: "Sacramento", cursive;
+    color: #102811;
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.gift-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #795548;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.gift-card .bank-logo {
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #2e3b2b;
+}
+
+.gift-card .account-number {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4e342e;
+    margin-bottom: 2px;
+}
+
+.gift-card .account-name {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.btn-aot-copy {
+    background-color: #795548;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-aot-copy:hover {
+    background-color: #2e3b2b;
+    color: white;
+}
+
+/* SECTION CLOSING */
+.closing {
+    background-image: url(img/background3.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+}
+
+.closing .sub-title {
+    color: #8b0000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+.closing h2 {
+    font-family: "Sacramento", cursive;
+    color: #102811;
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.closing .closing-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    border: 2px solid #795548;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    backdrop-filter: blur(5px);
+}
+
+.closing .quote-text {
+    color: #333;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.closing .divider {
+    width: 60px;
+    height: 3px;
+    background-color: #8b0000;
+    opacity: 0.8;
+}
+
+.closing .shinzou-text {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    color: #2e3b2b;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.closing .closing-note {
+    color: #555;
+    font-size: 1rem;
+}
+
+.closing .couple-names {
+    font-family: "Sacramento", cursive;
+    font-size: 3.8rem;
+    color: #102811;
+    font-weight: bold;
+}
+
+/* TOMBOL MUSIK FLOATING */
+#audio-container {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9999;
+}
+
+.audio-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: #8b0000;
+    color: #fff;
+    border: 2px solid #c29b38;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.audio-icon-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.audio-icon-wrapper i {
+    font-size: 1.6rem;
+}
+
+.spin {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* MODAL POPUP */
+.custom-aot-modal {
+    background-color: transparent;
+    border: none;
+}
+
+.custom-aot-modal img {
+    border: 4px solid #c29b38;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    max-height: 85vh;
+    object-fit: contain;
+}
