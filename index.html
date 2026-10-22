@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-   
+    <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
   </head>
   <body>
 
-   
+    
     <div id="aot-loader">
       <div class="aot-loader-content">
         <div class="wings-of-freedom">
@@ -35,16 +35,12 @@
     </div>
 
     <div id="particles-js"></div>
-    <div class="floating-quick-nav d-flex flex-column align-items-center">
-      <a href="#hero" class="quick-btn" title="Top"><i class="bi bi-arrow-up"></i></a>
-      <a href="#home" class="quick-btn" title="Mempelai"><i class="bi bi-heart-fill"></i></a>
-      <a href="#info" class="quick-btn" title="Lokasi"><i class="bi bi-geo-alt-fill"></i></a>
-      <a href="#story" class="quick-btn" title="Cerita"><i class="bi bi-journal-text"></i></a>
-      <a href="#gallery" class="quick-btn" title="Galeri"><i class="bi bi-images"></i></a>
-      <a href="#rsvp" class="quick-btn" title="RSVP"><i class="bi bi-envelope-check-fill"></i></a>
-    </div>
 
-    <!-- SECTION HERO -->
+    <button id="btn-next-page" class="floating-next-btn" title="Next Section" onclick="scrollToNextSection()">
+      <i id="next-icon" class="bi bi-chevron-down"></i>
+    </button>
+
+    <!-- SECTION HERO  -->
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
       <main>
         <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
@@ -79,40 +75,43 @@
       </div>
     </nav>
 
-    <!-- SECTION HOME -->
     <section id="home" class="home">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
+                <div class="col-md-8 text-center" data-aos="fade-down" data-aos-duration="1000">
                     <h2>Acara Pernikahan</h2>
                     <h3>Eren Yeager & Mikasa Ackerman</h3>
-                    <p>oleh karena itu, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami.</p>
+                    <p>Oleh karena itu, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami.</p>
                 </div>
             </div>
 
-            <div class="row couple">
-              <div class="col-lg-6">
-                <div class="row">
+            <div class="row couple mt-5">
+              <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                <div class="row align-items-center">
                   <div class="col-8 text-end">
                     <h3>Eren Yeager</h3>
-                    <p>Putra dari Bapak Grisha Yeager & Ibu Carla Yeager</p>
-                    <p>“Di antara luasnya dunia, hatiku selalu mencari arti dari sebuah kebebasan—dan menemukan maknanya dalam cinta.”</p>
+                    <p class="parents">Putra dari Bapak Grisha Yeager & Ibu Carla Yeager</p>
+                    <p class="quote">“Di antara luasnya dunia, hatiku selalu mencari arti dari sebuah kebebasan—dan menemukan maknanya dalam cinta.”</p>
                   </div>
                   <div class="col-4">
-                    <img src="eren3.jpg" alt="Eren Yeager" class="imgresponsive rounded-circle">
+                    <div class="couple-avatar-wrapper">
+                      <img src="eren3.jpg" alt="Eren Yeager" class="imgresponsive rounded-circle couple-img">
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-lg-6">
-                <div class="row">
+              <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+                <div class="row align-items-center">
                   <div class="col-4">
-                    <img src="mikasa3.jpg" alt="Mikasa Ackerman" class="imgresponsive rounded-circle">
+                    <div class="couple-avatar-wrapper">
+                      <img src="mikasa3.jpg" alt="Mikasa Ackerman" class="imgresponsive rounded-circle couple-img">
+                    </div>
                   </div>
-                  <div class="col-8 text-end">
+                  <div class="col-8 text-start">
                     <h3>Mikasa Ackerman</h3>
-                    <p>Putri dari Bapak Kenny Ackerman & Ibu Historia Ackerman</p>
-                    <p>“Dalam keheningan, hatiku selalu mendengar suara cintamu—dan menemukan kedamaian dalam kebersamaan.”</p>
+                    <p class="parents">Putri dari Bapak Kenny Ackerman & Ibu Historia Ackerman</p>
+                    <p class="quote">“Dalam keheningan, hatiku selalu mendengar suara cintamu—dan menemukan kedamaian dalam kebersamaan.”</p>
                   </div>
                 </div>
               </div>
@@ -121,37 +120,38 @@
         </div>
     </section>
 
-    <!-- FEATURES -->
+    <!-- SECTION INFO (PAGE 3: INFORMASI ACARA - ANIMATED) -->
     <section id="info" class="info">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-8 col-10 text-center">
+          <div class="col-md-8 col-10 text-center" data-aos="fade-down" data-aos-duration="1000">
             <h2>Informasi Acara</h2>
-            <p class="alamat">Shiganshina District, Southern Territory of Wall Maria, Paradis Island.</p>
+            <p class="alamat"><i class="bi bi-geo-alt me-1"></i> Shiganshina District, Southern Territory of Wall Maria, Paradis Island.</p>
             
-            <a href="https://maps.app.goo.gl/w3J4J3SMujfQkLuT8" target="_blank" class="btn btn-aot-map my-4">
-              <i class="bi bi-geo-alt-fill me-2"></i> Buka Peta Lokasi
-            </a>
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+              <a href="https://maps.app.goo.gl/w3J4J3SMujfQkLuT8" target="_blank" class="btn btn-aot-map my-4">
+                <i class="bi bi-geo-alt-fill me-2"></i> Buka Peta Lokasi
+              </a>
+            </div>
 
             <p class="description">Dengan hormat, kami mengundang Anda untuk menghadiri upacara penyatuan dua hati, yang akan diselenggarakan di dalam tembok Paradis. Kehadiran Anda merupakan kehormatan bagi kami.</p>
-
           </div>
         </div>
 
         <div class="row justify-content-center mt-4">
-          <div class="col-md-5 col-10">
-            <div class="card text-center text-bg-light mb-5">
-             <div class="card-header">Resepsi Pernikahan</div>
-             <div class="card-body">
+          <div class="col-md-6 col-10" data-aos="flip-up" data-aos-duration="1200" data-aos-delay="500">
+            <div class="card text-center text-bg-light mb-5 aot-info-card shadow-lg">
+             <div class="card-header fw-bold">Resepsi Pernikahan</div>
+             <div class="card-body py-4">
                <div class="row justify-content-center">
-                 <div class="col-md-6">
-                   <h5 class="card-title">Hari/Tanggal</h5>
-                   <p class="card-text">Minggu, 20 Oktober 1870</p>
+                 <div class="col-md-10">
+                   <h5 class="card-title text-uppercase letter-spacing-1 mb-2">Hari / Tanggal</h5>
+                   <p class="card-text fs-4 text-danger fw-bold"><i class="bi bi-calendar-event me-2"></i>Minggu, 20 Oktober 1870</p>
                  </div>
                </div>
              </div>
-             <div class="card-footer text-body-secondary">
-               Demi menjaga kedamaian di dalam tembok, seluruh tamu diharapkan menjaga ketertiban, kesopanan, dan kenyamanan bersama Mari jadikan hari ini sebagai kenangan indah, bukan medan pertempuran. May peace prevail within the walls.
+             <div class="card-footer text-body-secondary fst-italic">
+               Demi menjaga kedamaian di dalam tembok, seluruh tamu diharapkan menjaga ketertiban, kesopanan, dan kenyamanan bersama. Mari jadikan hari ini sebagai kenangan indah, bukan medan pertempuran. May peace prevail within the walls.
              </div>
            </div>
           </div>
@@ -463,6 +463,38 @@
         }
         isPlaying = !isPlaying;
       }
+
+    
+      const sections = ['hero', 'home', 'info', 'story', 'gallery', 'rsvp', 'gifts', 'closing'];
+      
+      function scrollToNextSection() {
+        const scrollPos = window.scrollY + 100;
+        let nextSec = sections[0];
+
+        for (let i = 0; i < sections.length; i++) {
+          const el = document.getElementById(sections[i]);
+          if (el && el.offsetTop > scrollPos) {
+            nextSec = sections[i];
+            break;
+          }
+        }
+
+        
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          document.getElementById(nextSec).scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      window.addEventListener('scroll', function() {
+        const icon = document.getElementById('next-icon');
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+          icon.classList.replace('bi-chevron-down', 'bi-chevron-up');
+        } else {
+          icon.classList.replace('bi-chevron-up', 'bi-chevron-down');
+        }
+      });
 
       function openModal(imageSrc) {
         document.getElementById('modalImg').src = imageSrc;
