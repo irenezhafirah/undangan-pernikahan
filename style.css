@@ -48,7 +48,7 @@ body {
 
     height: 100%;
 
-    background-image: url(img/background2.jpg);
+    background-image: url(background2.jpg);
 
     background-repeat: no-repeat;
 
@@ -192,7 +192,7 @@ body {
 
 .home {
 
-    background-image: url(img/background3.png);
+    background-image: url(background3.png);
 
     background-size: cover;
 
@@ -427,7 +427,7 @@ html {
 
 /* SECTION STORY */
 .story {
-    background-image: url(img/background3.png);
+    background-image: url(background3.png);
     background-size: cover;
     background-position: center;
     padding-top: 6rem;
@@ -516,7 +516,7 @@ html {
 
 /* SECTION GALLERY */
 .gallery {
-    background-image: url(img/background3.png);
+    background-image: url(background3.png);
     background-size: cover;
     background-position: center;
     padding-top: 6rem;
@@ -675,7 +675,7 @@ html {
 
 /* SECTION GIFTS */
 .gifts {
-    background-image: url(img/background3.png);
+    background-image: url(background3.png);
     background-size: cover;
     background-position: center;
     padding-top: 6rem;
@@ -737,7 +737,7 @@ html {
 
 /* SECTION CLOSING */
 .closing {
-    background-image: url(img/background3.png);
+    background-image: url(background3.png);
     background-size: cover;
     background-position: center;
     padding-top: 6rem;
