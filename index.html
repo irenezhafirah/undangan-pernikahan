@@ -8,10 +8,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Google Fonts & Font Awesome Icons -->
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- AOS Animation Library CSS -->
@@ -22,7 +22,27 @@
   </head>
   <body>
 
+   
+    <div id="aot-loader">
+      <div class="aot-loader-content">
+        <div class="wings-of-freedom">
+          <i class="bi bi-shield-shaded aot-shield-icon"></i>
+        </div>
+        <h2 class="aot-title">SHINZOU WO SASAGEYO</h2>
+        <p class="aot-subtitle">Official Wedding Invitation of Paradis</p>
+        <div class="aot-line"></div>
+      </div>
+    </div>
+
     <div id="particles-js"></div>
+    <div class="floating-quick-nav d-flex flex-column align-items-center">
+      <a href="#hero" class="quick-btn" title="Top"><i class="bi bi-arrow-up"></i></a>
+      <a href="#home" class="quick-btn" title="Mempelai"><i class="bi bi-heart-fill"></i></a>
+      <a href="#info" class="quick-btn" title="Lokasi"><i class="bi bi-geo-alt-fill"></i></a>
+      <a href="#story" class="quick-btn" title="Cerita"><i class="bi bi-journal-text"></i></a>
+      <a href="#gallery" class="quick-btn" title="Galeri"><i class="bi bi-images"></i></a>
+      <a href="#rsvp" class="quick-btn" title="RSVP"><i class="bi bi-envelope-check-fill"></i></a>
+    </div>
 
     <!-- SECTION HERO -->
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
@@ -94,7 +114,6 @@
                     <p>Putri dari Bapak Kenny Ackerman & Ibu Historia Ackerman</p>
                     <p>“Dalam keheningan, hatiku selalu mendengar suara cintamu—dan menemukan kedamaian dalam kebersamaan.”</p>
                   </div>
-                  </div>
                 </div>
               </div>
 
@@ -102,7 +121,7 @@
         </div>
     </section>
 
-    <!--FEATURES -->
+    <!-- FEATURES -->
     <section id="info" class="info">
       <div class="container">
         <div class="row justify-content-center">
@@ -121,20 +140,20 @@
 
         <div class="row justify-content-center mt-4">
           <div class="col-md-5 col-10">
-           <div class="card text-center text-bg-light mb-5">
-            <div class="card-header">Resepsi Pernikahan</div>
-            <div class="card-body">
-              <div class="row justify-content-center">
-                <div class="col-md-6">
-                  <h5 class="card-title">Hari/Tanggal</h5>
-                  <p class="card-text">Minggu, 20 Oktober 1870</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer text-body-secondary">
-              Demi menjaga kedamaian di dalam tembok, seluruh tamu diharapkan menjaga ketertiban, kesopanan, dan kenyamanan bersama Mari jadikan hari ini sebagai kenangan indah, bukan medan pertempuran. May peace prevail within the walls.
-            </div>
-          </div>
+            <div class="card text-center text-bg-light mb-5">
+             <div class="card-header">Resepsi Pernikahan</div>
+             <div class="card-body">
+               <div class="row justify-content-center">
+                 <div class="col-md-6">
+                   <h5 class="card-title">Hari/Tanggal</h5>
+                   <p class="card-text">Minggu, 20 Oktober 1870</p>
+                 </div>
+               </div>
+             </div>
+             <div class="card-footer text-body-secondary">
+               Demi menjaga kedamaian di dalam tembok, seluruh tamu diharapkan menjaga ketertiban, kesopanan, dan kenyamanan bersama Mari jadikan hari ini sebagai kenangan indah, bukan medan pertempuran. May peace prevail within the walls.
+             </div>
+           </div>
           </div>
         </div>
       </div>
@@ -363,19 +382,16 @@
       </div>
     </section>
 
-    
     <div id="audio-container">
       <audio id="song" loop preload="auto">
         <source src="thanksat.mp3" type="audio/mp3">
       </audio>
 
-      
       <div class="audio-icon-wrapper" onclick="toggleAudio()">
         <i id="music-icon" class="bi bi-disc-fill spin"></i>
       </div>
     </div>
 
-    
     <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content custom-aot-modal">
@@ -393,7 +409,7 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    
+    <!-- Particles JS -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <script>
@@ -403,10 +419,38 @@
       const musicIcon = document.getElementById('music-icon');
       let isPlaying = false;
 
-      
       song.volume = 0.3;
 
-      
+      function playAudio() {
+        song.play().then(() => {
+          isPlaying = true;
+          if (musicIcon) {
+            musicIcon.classList.add('spin');
+            musicIcon.classList.replace('bi-pause-circle-fill', 'bi-disc-fill');
+          }
+        }).catch((err) => {
+          console.log("Autoplay diblokir browser, lagu akan berputar pada interaksi pertama:", err);
+        });
+      }
+
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loader = document.getElementById('aot-loader');
+          if (loader) {
+            loader.classList.add('fade-out');
+            setTimeout(() => loader.style.display = 'none', 1000);
+          }
+        }, 2200);
+
+        playAudio();
+      });
+
+      document.addEventListener('click', function initialPlay() {
+        if (!isPlaying) {
+          playAudio();
+        }
+      }, { once: true });
+
       function toggleAudio() {
         if (isPlaying) {
           song.pause();
@@ -420,15 +464,6 @@
         isPlaying = !isPlaying;
       }
 
-    
-      document.querySelector('.btn-open-invitation').addEventListener('click', function() {
-        if (!isPlaying) {
-          song.play();
-          isPlaying = true;
-          musicIcon.classList.add('spin');
-        }
-      });
-
       function openModal(imageSrc) {
         document.getElementById('modalImg').src = imageSrc;
       }
@@ -438,7 +473,6 @@
         alert('Nomor rekening berhasil disalin!');
       }
 
-      
       particlesJS("particles-js", {
         "particles": {
           "number": { "value": 25, "density": { "enable": true, "value_area": 800 } },
